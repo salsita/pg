@@ -58,6 +58,8 @@ var PgDriver = Base.extend({
             return 'TIMESTAMP';
           case type.BLOB:
             return 'BYTEA';
+          case 'DATE_TIME_TZ':
+            return 'TIMESTAMP WITH TIME ZONE'
         }
         return this._super(str);
     },
